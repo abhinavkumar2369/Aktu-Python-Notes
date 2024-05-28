@@ -1,7 +1,7 @@
 <h2 align="center">Unit - 2</h2>
 <h2 align="center">Python  Program  Flow  Control  Conditional  Block</h2>
 
-## Python if Statement
+## 🚀 Python if Statement
 An if statement executes a block of code only if the specified condition is met.
 
 #### Syntax
@@ -9,6 +9,7 @@ An if statement executes a block of code only if the specified condition is met.
 if condition:
     # body of if statement
 ```
+
 Here, if the condition of the if statement is:
 - **True** - the body of the if statement executes.
 - **False** - the body of the if statement is skipped from execution.
@@ -23,15 +24,18 @@ if number > 0:
 
 print('This statement always executes')
 ```
+
 #### Output
-````py
+```
 Number is positive
 This statement always executes
-````
+```
 
 
+<!-- ------------------------------------------------------------ -->
 
-## Python if...else Statement
+
+## 🚀 Python if...else Statement
 An if statement can have an optional else clause. The else statement executes if the condition in the if statement evaluates to False.
 
 #### Syntax
@@ -56,15 +60,17 @@ else:
 
 print('This statement always executes')
 ```
+
 #### Output
-````py
+```
 Positive Number
 This statement is always executed
-````
+```
+
+<!-- ------------------------------------------------------------ -->
 
 
-
-## Python if…elif…else Statement
+## 🚀 Python if…elif…else Statement
 The if...else statement is used to execute a block of code among two alternatives.
 However, if we need to make a choice between more than two alternatives, we use the if...elif...else statement.
 
@@ -101,3 +107,212 @@ print('This statement is always executed')
 Zero
 This statement is always executed
 ````
+
+<!-- ------------------------------------------------------------ -->
+
+
+## 🚀 Python for Loop
+
+In Python, a for loop is used to iterate over sequences such as lists, strings, tuples, etc.
+
+#### Syntax
+```py
+for val in sequence:
+    # statement(s)
+```
+Here, val accesses each item of the sequence on each iteration. The loop continues until we reach the last item in the sequence.
+
+
+### ➡️ For Loop in Lists
+```py
+languages = ['Swift', 'Python', 'Go']
+```
+
+#### Access elements of the list one by one
+```py
+for i in languages:
+    print(i)
+```
+
+#### Output
+```py
+Swift
+Python
+Go
+```
+
+#### Explaination 
+In the above example, we have created a list called languages. As the list has 3 elements, the loop iterates 3 times.
+The value of i is --
+1. Swift in the first iteration.  
+2. Python in the second iteration.  
+3. Go in the third iteration.  
+
+<!-- ------------------------------------------------------------ -->
+
+
+### ➡️ For Loop Through a String
+```py
+language = 'Python'
+```
+
+#### Iterate over each character in language
+```py
+for x in language:
+    print(x)
+```
+
+#### Output
+```
+P
+y
+t
+h
+o
+n
+```
+Here, we have printed each character of the string language using a for loop.
+
+
+<!-- ------------------------------------------------------------ -->
+
+
+### ➡️ For Loop with range()
+In Python, the range() function returns a sequence of numbers. For example,
+
+```py
+values = range(4)
+```
+Here, range(4) returns a sequence of 0, 1, 2 ,and 3.  
+Since the range() function returns a sequence of numbers, we can iterate over it using a for loop.
+
+
+
+### Example(s) 
+#### Iterate from i = 0 to i = 3
+
+```py
+for i in range(4):
+    print(i)
+```
+
+#### Output
+
+```
+0
+1
+2
+3
+```
+
+
+<!-- ------------------------------------------------------------ -->
+
+
+## 🚀Note Python Range Function 
+The Python `range()` function generates a sequence of numbers.  
+By default, the sequence starts at 0, increments by 1, and stops **before** the specified number.
+
+#### Syntax
+`range(start, stop, step)`
+The start and step arguments are optional.
+
+#### Return Value
+The `range()` function returns an immutable sequence of numbers.
+
+<!-- ------------------------------------------------------------ -->
+
+### ➡️ Example(s)
+
+1. #### Create a sequence from 0 to 3
+```py
+numbers = range(4)
+```
+
+#### Iterating through the sequence
+```py
+for i in numbers:
+    print(i)
+```
+
+#### Output
+```
+0
+1
+2
+3
+```
+
+2. #### Iterate the loop five times
+```py
+for i in range(5):
+    print(f'{i} Hello')
+```
+
+```
+0 Hello
+1 Hello
+2 Hello
+3 Hello
+4 Hello
+```
+
+
+<!-- ------------------------------------------------------------ -->
+
+
+### Other Formats -
+
+### ➡️ `range(stop)`
+- #### create a sequence from 0 to 3 (4 is not included)
+```py
+numbers = range(4)
+```
+
+- #### convert to list and print it
+```py
+print(list(numbers))    # Output: [0, 1, 2, 3]
+```
+In this example, we have converted the range sequence to a list.
+
+
+### ➡️ `range(start, stop)`
+
+- #### create a sequence from 2 to 4 (5 is not included)
+```py
+numbers = range(2, 5)
+print(list(numbers))    # [2, 3, 4]
+```
+
+- #### create a sequence from -2 to 3
+```py
+numbers = range(-2, 4)    
+print(list(numbers))    # [-2, -1, 0, 1, 2, 3]
+```
+
+- #### creates an empty sequence
+```py
+numbers = range(4, 2) 
+print(list(numbers))    # []
+```
+
+### ➡️ `range(start, stop, step)`
+
+- #### Create a sequence from 2 to 10 with increment of 3
+```py
+numbers = range(2, 10, 3)
+print(list(numbers))    # [2, 5, 8]
+```
+
+- #### Create a sequence from 4 to -1 with increment of -1
+```py
+numbers = range(4, -1, -1)    
+print(list(numbers))    # [4, 3, 2, 1, 0]
+```
+
+- #### range(0, 5, 1) is equivalent to range(5)
+```py
+numbers = range(0, 5, 1) 
+print(list(numbers))    # [0, 1, 2, 3, 4]
+```
+
