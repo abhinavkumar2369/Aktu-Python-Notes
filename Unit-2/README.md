@@ -316,3 +316,262 @@ numbers = range(0, 5, 1)
 print(list(numbers))    # [0, 1, 2, 3, 4]
 ```
 
+
+ Use of while loops in python, 
+Loop manipulation using pass, continue, break and else. 
+
+
+
+<!-- ------------------------------------------------------------ -->
+
+## 🚀 While Loop
+In Python, we use the while loop to repeat a block of code until a certain condition is met.
+
+### Syntax
+```py
+while condition:
+    # body of while loop
+```
+
+### Example(s)
+
+#### ➡️ Code
+   
+```py
+number = 1
+
+while number <= 3:
+    print(number)
+    number = number + 1
+```
+
+#### ➡️ Output
+
+```
+1
+2
+3
+```
+
+In the above example, we have used a while loop to print the numbers from 1 to 3. The loop runs as long as the condition number <= 3 is satisfied.
+
+#### ➡️ Code
+
+```py
+# Calculate the sum of numbers until user enters 0
+number = int(input('Enter a number: '))
+
+total = 0
+
+# iterate until the user enters 0
+while number != 0:
+    total += number
+    number = int(input('Enter a number: '))
+
+print('The sum is', total)
+```
+
+#### ➡️ Output
+```
+Enter a number: 3
+Enter a number: 2
+Enter a number: 1
+Enter a number: -4
+Enter a number: 0
+The sum is 2
+```
+
+## 🚀 Infinite while Loop
+If the condition of a while loop is always True, the loop runs for infinite times, forming an infinite while loop. For example,
+
+```py
+age = 32
+
+# the test condition is always True
+while age > 18:
+    print('You can vote')
+```
+
+#### ➡️ Output
+```
+You can vote
+You can vote
+You can vote
+.
+.
+.
+```
+
+`The above program is equivalent to:`
+
+```py
+age = 32
+    
+# the test condition is always True
+while True:
+    print('You can vote')
+```
+
+
+## 🚀 While loop with an else
+In Python, a while loop can have an optional else clause - that is executed once the loop condition is False. For example,
+
+#### ➡️ Code
+```py
+counter = 0
+
+while counter  <  2:
+    print('This is inside loop')
+    counter = counter + 1
+else:
+    print('This is inside else block')
+```
+
+#### ➡️ Output
+```
+This is inside loop
+This is inside loop
+This is inside else block
+```
+Here, on the third iteration, the counter becomes 2 which terminates the loop. It then executes the else block and prints This is inside else block.
+
+**Note**: The else block will not execute if the while loop is terminated by a break statement.
+
+
+<!-- ------------------------------------------------------------ -->
+
+
+## 🚀 Break & Continue Statement 
+In programming, the break and continue statements are used to alter the flow of loops:
+- break exits the loop entirely
+- continue skips the current iteration and proceeds to the next one
+
+
+### 🚀 Break
+The break statement terminates the loop immediately when it's encountered.
+
+
+#### ➡️ Syntax
+```py
+break
+```
+
+
+### 🚀 Break in For Loop
+We can use the break statement with the for loop to terminate the loop when a certain condition is met.
+
+
+#### Example
+#### ➡️ Code
+```py
+for i in range(5):
+    if i == 3:
+        break
+    print(i)
+```
+
+#### ➡️ Output
+```
+0
+1
+2
+```
+
+
+### 🚀 Break in While Loop
+We can use a break statement inside a while loop to terminate the loop immediately without checking the test condition. For example,
+
+
+#### ➡️ Code
+```py
+while True:
+    user_input = input('Enter your name: ')
+
+    # terminate the loop when user enters end
+    if user_input == 'end':
+        print(f'The loop is ended')
+        break  
+
+    print(f'Hi {user_input}')
+```
+
+#### ➡️ Output
+```
+Enter your name: Kevin
+Hi Kevin
+Enter your name: end
+The loop is ended
+```
+
+Here, the condition of the while loop is always True. However, if the user enters end, the loop termiantes because of the break statement.
+
+
+### 🚀 Python continue Statement
+The continue statement skips the current iteration of the loop and the control flow of the program goes to the next iteration.
+
+#### Syntax
+```py
+continue
+```
+
+<!-- ------------------------------------------------------------ -->
+
+
+### Continue Statement with for Loop
+We can use the continue statement with the for loop to skip the current iteration of the loop and jump to the next iteration. For example,
+
+#### ➡️ Code
+```py
+for i in range(5):
+    if i == 3:
+        continue
+    print(i)
+```
+
+#### ➡️ Output
+```
+0
+1
+2
+4
+```
+
+In the above example,
+```py
+if i == 3:
+    continue
+```
+skips the current iteration when i is equal to 3, and continues the next iteration. Hence, the output has all the values except 3.
+
+
+<!-- ------------------------------------------------------------ -->
+
+
+## 🚀 Pass Statement
+- In Python programming, the pass statement is a null statement which can be used as a placeholder for future code.
+- Suppose we have a loop or a function that is not implemented yet, but we want to implement it in the future. In such cases, we can use the pass statement.
+
+#### ➡️ Syntax
+```py
+pass
+```
+
+#### ➡️ Example
+```py
+n = 10
+
+# use pass inside if statement
+if n > 10:
+    pass
+
+print('Hello')
+```
+
+#### Use of pass Statement inside Function or Class
+We can do the same thing in an empty function or class as well. For example,
+```py
+def function(args):
+    pass
+class Example:
+    pass
+```
