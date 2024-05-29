@@ -4,7 +4,7 @@
 ## 🚀 Python if Statement
 An if statement executes a block of code only if the specified condition is met.
 
-#### Syntax
+#### ➡️ Syntax
 ```py
 if condition:
     # body of if statement
@@ -14,7 +14,7 @@ Here, if the condition of the if statement is:
 - **True** - the body of the if statement executes.
 - **False** - the body of the if statement is skipped from execution.
 
-#### Code 
+#### ➡️ Code 
 ```py
 number = 10
 
@@ -25,7 +25,7 @@ if number > 0:
 print('This statement always executes')
 ```
 
-#### Output
+#### ➡️ Output
 ```
 Number is positive
 This statement always executes
@@ -38,7 +38,7 @@ This statement always executes
 ## 🚀 Python if...else Statement
 An if statement can have an optional else clause. The else statement executes if the condition in the if statement evaluates to False.
 
-#### Syntax
+#### ➡️ Syntax
 ```py
 if condition:
     # body of if statement
@@ -49,7 +49,7 @@ Here, if the condition inside the if statement evaluates to
 - **True** - the body of if executes, and the body of else is skipped.
 - **False** - the body of else executes, and the body of if is skipped
 
-#### Code 
+#### ➡️ Code 
 ```py
 number = 10
 
@@ -61,7 +61,7 @@ else:
 print('This statement always executes')
 ```
 
-#### Output
+#### ➡️ Output
 ```
 Positive Number
 This statement is always executed
@@ -74,7 +74,7 @@ This statement is always executed
 The if...else statement is used to execute a block of code among two alternatives.
 However, if we need to make a choice between more than two alternatives, we use the if...elif...else statement.
 
-#### Syntax
+#### ➡️ Syntax
 ```py
 if condition1:
     # code block 1
@@ -91,7 +91,7 @@ Here,
 - **elif condition2** - If condition1 is not True, the program checks condition2. If condition2 is True, it executes code block 2.
 - **else** - If neither condition1 nor condition2 is True, the program defaults to executing code block 3.
 
-#### Code 
+#### ➡️ Code 
 ```py
 number = 0
 if number > 0:
@@ -102,7 +102,7 @@ else:
     print('Zero')
 print('This statement is always executed')
 ```
-#### Output
+#### ➡️ Output
 ````py
 Zero
 This statement is always executed
@@ -115,7 +115,7 @@ This statement is always executed
 
 In Python, a for loop is used to iterate over sequences such as lists, strings, tuples, etc.
 
-#### Syntax
+#### ➡️ Syntax
 ```py
 for val in sequence:
     # statement(s)
@@ -134,7 +134,7 @@ for i in languages:
     print(i)
 ```
 
-#### Output
+#### ➡️ Output
 ```py
 Swift
 Python
@@ -213,11 +213,11 @@ for i in range(4):
 The Python `range()` function generates a sequence of numbers.  
 By default, the sequence starts at 0, increments by 1, and stops **before** the specified number.
 
-#### Syntax
+#### ➡️ Syntax
 `range(start, stop, step)`
 The start and step arguments are optional.
 
-#### Return Value
+#### ➡️ Return Value
 The `range()` function returns an immutable sequence of numbers.
 
 <!-- ------------------------------------------------------------ -->
@@ -235,7 +235,7 @@ for i in numbers:
     print(i)
 ```
 
-#### Output
+#### ➡️ Output
 ```
 0
 1
@@ -261,7 +261,7 @@ for i in range(5):
 <!-- ------------------------------------------------------------ -->
 
 
-### Other Formats -
+### 🚀 Other Formats -
 
 ### ➡️ `range(stop)`
 - #### create a sequence from 0 to 3 (4 is not included)
@@ -575,3 +575,187 @@ def function(args):
 class Example:
     pass
 ```
+
+
+## 📝 Programs
+
+#### ➡️ Calculate the sum of all numbers from 1 to 100.
+```py
+total = 0
+for i in range(1, 101):
+    total += i
+print("Sum:", total)
+```
+
+
+#### ➡️ Print numbers from 10 to 1 in reverse order using a while loop.
+```py
+count = 10
+while count >= 1:
+    print(count)
+    count -= 1
+```
+
+
+#### ➡️ Print the multiplication table of 5 using a loop.
+```py
+num = 5
+for i in range(1, 11):
+    print(num, "x", i, "=", num * i)
+```
+
+
+#### ➡️ Calculate the factorial of a number using a loop.
+```py
+num = 5
+factorial = 1
+for i in range(1, num + 1):
+    factorial *= i
+print("Factorial of", num, "is", factorial)
+```
+
+
+#### ➡️ Print the Fibonacci series up to 10 terms.
+```py
+a, b = 0, 1
+count = 0
+while count < 10:
+    print(a, end=" ")
+    a, b = b, a + b
+    count += 1
+```
+
+
+#### ➡️ Find the largest number in a list using a loop.
+```py
+numbers = [10, 25, 7, 45, 60, 35]
+largest = numbers[0]
+for num in numbers:
+    if num > largest:
+        largest = num
+print("Largest number:", largest)
+```
+
+
+#### Check if a given number is prime or not.
+```py
+num = 17
+is_prime = True
+for i in range(2, int(num ** 0.5) + 1):
+    if num % i == 0:
+        is_prime = False
+        break
+if is_prime:
+    print(num, "is a prime number")
+else:
+    print(num, "is not a prime number")
+```
+
+
+#### ➡️ Print the ASCII value of all characters from 'A' to 'Z'.
+```py
+for char in range(ord('A'), ord('Z') + 1):
+    print(chr(char), "=", char)
+```
+
+
+#### ➡️ Print a pattern using nested loops:
+```
+*
+**
+***
+****
+*****
+```
+```py
+for i in range(1, 6):
+    for j in range(i):
+        print("*", end="")
+    print()
+```
+
+
+#### ➡️ Reverse a given string using a loop.
+```py
+text = "hello"
+reversed_text = ""
+for char in text:
+    reversed_text = char + reversed_text
+print("Reversed string:", reversed_text)
+```
+
+
+#### ➡️ Check if a string is a palindrome or not.
+```py
+text = "radar"
+reversed_text = ""
+for char in text:
+    reversed_text = char + reversed_text
+if text == reversed_text:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+```
+
+
+#### ➡️ Print all leap years between 2000 and 2020.
+```py
+for year in range(2000, 2021):
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        print(year)
+```
+
+
+#### ➡️ Find the sum of all even numbers between 1 and 50.
+```py
+total = 0
+for i in range(2, 51, 2):
+    total += i
+print("Sum of even numbers:", total)
+```
+
+
+#### ➡️ Remove duplicates from a list using a loop.
+```py
+numbers = [1, 2, 2, 3, 4, 4, 5]
+unique_numbers = []
+for num in numbers:
+    if num not in unique_numbers:
+        unique_numbers.append(num)
+print("List without duplicates:", unique_numbers)
+```
+
+
+#### ➡️ Find the average of all numbers in a list.
+```py
+numbers = [10, 20, 30, 40, 50]
+total,count = 0,0
+for value in numbers:
+    total += value
+    count += 1
+print("Average:", total/count)
+```
+
+
+#### ➡️ Generate a list of squares of numbers from 1 to 10.
+```py
+squares = [i ** 2 for i in range(1, 11)]
+print("Squares:", squares)
+```
+
+
+#### ➡️ Calculate the LCM (Least Common Multiple) of two numbers.
+```py
+def gcd(x, y):
+    while(y):
+        x, y = y, x % y
+    return x
+
+def lcm(x, y):
+    return (x * y) // gcd(x, y)
+
+num1 = 12
+num2 = 15
+print("LCM of", num1, "and", num2, "is", lcm(num1, num2))
+```
+
