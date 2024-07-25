@@ -24,6 +24,96 @@
 
 
 
+## Different Modes
+1. Read Mode (r)
+  - Opens the file for reading. The file must exist.
+  Syntax: `open('filename', 'r')`
+
+  ```py
+  with open('example.txt', 'r') as file:
+      for line in file:
+          print(line.strip())
+  ```
+
+
+
+
+2. Read and Write Mode (r+)
+  - Opens the file for both reading and writing. The file must exist.
+  Syntax: `open('filename', 'r+')`
+
+  ```py
+  with open('example.txt', 'r+') as file:
+      content = file.read()
+      file.write('New content')
+  ```
+
+
+
+3. Write Mode (w)
+   
+  - Opens the file for writing. If the file exists, it truncates (clears) the file. If the file does not exist, it creates a new file.
+  Syntax: `open('filename', 'w')`
+  ```py
+  with open('example.txt', 'w') as file:
+      file.write('Hello, world!')
+  ```
+
+
+
+4. Write and Read Mode (w+)
+  - Opens the file for both writing and reading.
+  - If the file exists, it truncates the file. If the file does not exist, it creates a new file.
+  Syntax:  `open('filename', 'w+')`
+  ```py
+  with open('example.txt', 'w+') as file:
+      file.write('Hello, world!')
+      file.seek(0)
+      content = file.read()
+      print(content)
+  ```
+
+
+
+5. Append Mode (a)
+   
+  Opens the file for writing. If the file exists, it appends to the end of the file without truncating it. If the file does not exist, it creates a new file.
+  Syntax: `open('filename', 'a')`
+  ```py
+  with open('example.txt', 'a') as file:
+      file.write('Appending this line.')
+  ```
+
+6. Append and Read Mode (a+)
+   
+   Opens the file for both writing and reading. If the file exists, it appends to the end of the file without truncating it. If the file does not exist, it creates a new file.
+    Syntax: open('filename', 'a+')
+   ```py
+    with open('example.txt', 'a+') as file:
+        file.write('Appending this line.')
+        file.seek(0)
+        content = file.read()
+        print(content)
+    ```
+   
+## Binary Modes
+These modes are used for binary files (like images or non-text files).
+
+7. Read Binary Mode (rb)
+- Opens the file for reading in binary mode. The file must exist.
+  Syntax: `open('filename', 'rb')`
+  ```py
+  with open('example.png', 'rb') as file:
+      content = file.read()
+  ```
+
+8. Write Binary Mode (wb)
+- Opens the file for writing in binary mode. If the file exists, it truncates the file. If the file does not exist, it creates a new file.
+  Syntax: `open('filename', 'wb')`
+  ```py
+  with open('example.png', 'wb') as file:
+      file.write(b'binary data')
+  ```
 
 
 ## 🚀 Reading Functions
