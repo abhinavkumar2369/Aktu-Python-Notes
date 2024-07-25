@@ -75,10 +75,40 @@
 
 
 
+## 🚀 Writing Functions
+There are two ways to write in a file.
+
+1. write() :
+
+   Inserts the string str1 in a single line in the text file.
+
+   ```py
+   file = open("output.txt","w")
+   string = "1st Line\n 2nd Line\n 3rd Line"
+   file.write(string)
+   file.close()
+   ```
+   
+![image](https://github.com/user-attachments/assets/7aa994e6-c0a5-4c3c-8c36-f9565c662e82)
+
+   
+2. writelines() :
+
+   For a list of string elements, each string is inserted in the text file. Used to insert multiple strings at a single time.
+   ```py
+   file = open("output.txt","w")
+   
+   l = ["1st Line\n","2nd Line\n","3rd Line\n"]
+   file.writelines(l)
+   
+   file.close()
+   ```
+
+![image](https://github.com/user-attachments/assets/20f1658b-956c-405c-a2b0-9e4901e9e1e6)
 
 
 
-## Example 🚀
+## Programs 🚀
 Sample text file --> `example.txt` --->
 
 ```sh
@@ -170,11 +200,13 @@ output.write(file.read())
 file.close()
 output.close()
 ```
-
 ![image](https://github.com/user-attachments/assets/616448b7-bbf1-4cf1-932b-1ea8d92a85a5)
 
+
+#### Another method --->
 ```py
 # Read from 'input.txt' and write to 'output.txt'
+
 with open('input.txt', 'r') as file_in:
     with open('output.txt', 'w') as file_out:
         for line in file_in:
